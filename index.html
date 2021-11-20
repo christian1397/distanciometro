@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Dashboard</title>
+    </head>
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+
+            <!-- <div class="header__img">
+                <img src="assets/img/perfil.jpg" alt="">
+            </div> -->
+            
+        </header>
+
+        <div class="containerOpen">
+            <i class='bx bx fas fa-chevron-right nav__icon open' id="openMenu" onclick="openMenu()"></i>
+        </div>
+
+        <div class="l-navbar" id="nav-bar" style="padding-right: 0px;">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo" style="padding-left: 1.2rem;">
+                        <i class='bx nav__logo-icon'><img src="assets/img/logo.png"></i>
+                        <span class="nav__logo-name">Distanciometro</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active">
+                        <i class='bx bx cil-chart nav__icon' ></i>
+                            <span class="nav__name">Datos Generales</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx cil-bell nav__icon' ></i>
+                            <span class="nav__name">Notificaciones</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="#" class="nav__link">
+                        <i class='bx cil-account-logout nav__icon' ></i>
+                        <span class="nav__name">Cerrar Sesión</span>
+                    </a>
+
+                    <a href="#" class="nav__link" style="padding-left: 1.2rem;">
+                        <i class='bx nav__icon'><img src="assets/img/wong.png"></i>
+                        <span class="nav__name">Tienda</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
