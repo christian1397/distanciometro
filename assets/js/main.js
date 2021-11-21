@@ -35,17 +35,15 @@ linkColor.forEach(l=> l.addEventListener('click', colorLink))
 
 
 function openMenu(){
-    var botonMenu = document.getElementById("nav-bar")
-    var openMenu = document.getElementById("openMenu")
+    var botonMenu = document.getElementById("nav-bar");
+    var openMenu = document.getElementById("openMenu");
     if (botonMenu.classList.contains("show")) {
-        botonMenu.classList.remove("show")
-        openMenu.classList.remove("fa-chevron-left")
-        openMenu.classList.add("fa-chevron-right")
-        openMenu.style.right = "20px"
+        botonMenu.classList.remove("show");
+        openMenu.style.transform = "rotate(0deg)";
+        openMenu.style.right = "20px";
     } else{
-        botonMenu.classList.add("show")
-        openMenu.classList.add("fa-chevron-left")
-        openMenu.classList.remove("fa-chevron-right")
-        openMenu.style.right = "-136px"
+        botonMenu.classList.add("show");
+        openMenu.style.transform = "rotate(-180deg)";
+        openMenu.style.right = "-136px";
     }
 }

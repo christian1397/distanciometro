@@ -1,5 +1,27 @@
-/*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+/*===== FONTS =====*/
+@font-face {
+  font-family: 'Gilroy';
+  src: url(../fonts/Gilroy-Black.woff) format('woff');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(../fonts/Gilroy-Bold.woff) format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(../fonts/Gilroy-SemiBold.woff) format('woff');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(../fonts/Gilroy-Medium.woff) format('woff');
+  font-weight: 500;
+}
 
 /*===== VARIABLES CSS =====*/
 :root{
@@ -12,7 +34,7 @@
   --white-color: #F7F6FB;
   
   /*===== Font and typography =====*/
-  --body-font: 'Nunito', sans-serif;
+  --body-font: 'Gilroy', Arial, Helvetica, sans-serif;
   --normal-font-size: 1rem;
   
   /*===== z index =====*/
@@ -53,10 +75,10 @@ a{
   transition: .5s;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #000000;
   font-size: 1.5rem;
   cursor: pointer;
-  padding-left: 12px;
 }
 
 .containerOpen{
