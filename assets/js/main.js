@@ -37,13 +37,16 @@ linkColor.forEach(l=> l.addEventListener('click', colorLink))
 function openMenu(){
     var botonMenu = document.getElementById("nav-bar");
     var openMenu = document.getElementById("openMenu");
+    var body = document.getElementById("body-pd");
     if (botonMenu.classList.contains("show")) {
         botonMenu.classList.remove("show");
+        body.classList.remove("nav-open");
         openMenu.style.transform = "rotate(0deg)";
-        openMenu.style.right = "20px";
+        openMenu.style.left = "56px";
     } else{
         botonMenu.classList.add("show");
+        body.classList.add("nav-open");
         openMenu.style.transform = "rotate(-180deg)";
-        openMenu.style.right = "-136px";
+        openMenu.style.left = "196px";
     }
 }

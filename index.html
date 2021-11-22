@@ -19,49 +19,78 @@
         <header class="header" id="header">
             <ul class="nav nav-pills" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                    <button class="nav-link active" 
+                            id="pills-home-tab" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#pills-home"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-home"
+                            aria-selected="true">Primer nivel</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                    <button class="nav-link" 
+                            id="pills-profile-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-profile"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-profile"
+                            aria-selected="false">Segundo nivel</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                    <button class="nav-link"
+                            id="pills-contact-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-contact"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-contact"
+                            aria-selected="false">Tercer Nivel</button>
                 </li>
             </ul>
         </header>
 
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="tab-pane fade show active"
+                 id="pills-home"
+                 role="tabpanel"
+                 aria-labelledby="pills-home-tab">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatum earum culpa accusamus ullam aspernatur quae
                     quod sint, itaque, est incidunt amet ex voluptatibus facilis! Esse quaerat nam sapiente quia.</p>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="tab-pane fade"
+                 id="pills-profile"
+                 role="tabpanel"
+                 aria-labelledby="pills-profile-tab">
                 <p>Puto uwu</p>
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="tab-pane fade"
+                 id="pills-contact"
+                 role="tabpanel"
+                 aria-labelledby="pills-contact-tab">
                 <p>GA</p>
             </div>
         </div>
 
-        <div class="containerOpen">
+        <!-- <div class="containerOpen">
             <i class='bx bx nav__icon open' id="openMenu" onclick="openMenu()">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.1401 17.7803L10.0795 16.7197L14.7991 12L10.0795 7.28032L11.1401 6.21973L16.9204 12L11.1401 17.7803Z" fill="#333333"/>
                 </svg>
             </i>
-        </div>
+        </div> -->
 
         <div class="l-navbar" id="nav-bar" style="padding-right: 0px;">
             <nav class="nav">
                 <div>
-                    <a href="#" class="nav__logo" style="padding-left: 1.2rem;">
-                        <i class='bx nav__logo-icon'><img src="assets/img/logo.png"></i>
-                        <span class="nav__logo-name">Distanciometro</span>
+                    <a href="#" class="nav__logo">
+                        <span class='bx nav__logo-icon'></span>
                     </a>
 
                     <div class="nav__list">
                         <a href="#" class="nav__link active">
-                        <i class='bx bx cil-chart nav__icon' ></i>
+                            <i class='bx bx cil-chart nav__icon' ></i>
                             <span class="nav__name">Datos Generales</span>
                         </a>
 
@@ -78,12 +107,21 @@
                         <span class="nav__name">Cerrar Sesión</span>
                     </a>
 
-                    <a href="#" class="nav__link" style="padding-left: 1.2rem;">
-                        <i class='bx nav__icon'><img src="assets/img/wong.png"></i>
-                        <span class="nav__name">Tienda</span>
-                    </a>
+                    <div class="nav__user">
+                        <img class='bx nav__user-img' src="assets/img/img_usuario.png">
+                        <div class="nav__user-info">
+                            <span class="nav__user-name">Tienda Benavides</span>
+                            <span class="nav__user-company">Supermercado Wong</span>
+                        </div>
+                    </div>
                 </div>
             </nav>
+            
+            <i class='bx bx nav__icon open' id="openMenu" onclick="openMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.1401 17.7803L10.0795 16.7197L14.7991 12L10.0795 7.28032L11.1401 6.21973L16.9204 12L11.1401 17.7803Z" fill="#333333"/>
+                </svg>
+            </i>
         </div>
 
         <!-- PLUGINS -->
