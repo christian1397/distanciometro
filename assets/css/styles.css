@@ -141,7 +141,7 @@ a{
   border-color: #E9E6EE;
 }
 
-.nav{
+.nav:not(header .nav){
   height: 100%;
   display: flex;
   flex-direction: column;
