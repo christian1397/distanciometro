@@ -56,67 +56,66 @@
                  id="pills-home"
                  role="tabpanel"
                  aria-labelledby="pills-home-tab">
-                 <div class="container-fluid">
-                    <div class="row justify-content-between">
-                      <div class="col-sm pr-4 rounded-lg" style="margin-right: 16px;">
-                        <div class="row justify-content-between">
-                            <div class="col-lg-5 bg-white" style="border-radius: 10px; margin-bottom: 32px; padding: 20px;">
-                                <p style="font-size: 14px; color: #440099; font-weight: 700;">Acercamientos en total</p>
-                                <div class="row">
-                                    <div class="col-auto" style="padding-right: 6px;">
-                                        <p style="font-size: 36px; color: #333333; font-weight: 700; margin-bottom: 0;">500</p>
-                                    </div>
-                                    <div class="col" style="padding-left: 6px;">
-                                        <div class="row">
-                                            <div class="col-12 d-flex" style="position: relative;">
-                                                <div class="col-1" style="padding: 0;">
-                                                    <img src="assets/img/Vector.png">
-                                                </div>
-                                                <div class="col-5" style="padding: 0;">
-                                                    <p style="font-size: 12px; color: #333333; font-weight: 500; margin-bottom: 0; position: absolute; bottom: 0; left: 30px;">12%</p>
-                                                </div>
+                 <div class="container-fluid p-0">
+                     <div class="row g-0"> 
+                         <div class="col-6">
+                            <div class="row g-0 d-flex align-items-stretch" style="margin-right: 16px;">
+                                <div class="col-6">
+                                    <div class="card-custom acercamientos-total">
+                                        <h2>Acercamientos en total</h2>
+                                        <div class="value">
+                                            <span class="number">500</span>
+                                            <div class="caption">
+                                                <span class="percent">
+                                                    <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
+                                                    </svg>
+                                                    12%
+                                                </span>
+                                                <p>comparativa con el día anterior</p>
                                             </div>
-                                            <div class="col">
-                                                <p style="font-size: 12px; color: #333333; font-weight: 500; margin-bottom: 0;">Comparativa con el día anterior</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="card-custom promedio-acercamientos">
+                                        <h2>Promedio de acercamientos</h2>
+                                        <div class="value">
+                                            <span class="number">32</span>
+                                            <div class="caption">
+                                                <p>acercamientos por hora</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 bg-white" style="border-radius: 10px; margin-bottom: 32px; padding: 20px;">
-                                <p style="font-size: 14px; color: #440099; font-weight: 700;">Promedio de acercamientos</p>
-                                <div class="row">
-                                    <div class="col-auto" style="padding-right: 6px;">
-                                        <p style="font-size: 36px; color: #333333; font-weight: 700; margin-bottom: 0;">32</p>
-                                    </div>
-                                    <div class="col" style="padding-left: 6px; position: relative;">
-                                        <p style="font-size: 12px; color: #333333; font-weight: 500; margin-bottom: 0; position: absolute; top: 30%;">Acercamientos por hora</p>
-                                    </div>
+
+                            <div class="row g-0" style="margin-right: 16px;">
+                                <div class="col-12 card-custom acercamientos-hora">
+                                    <h2>Acercamientos por Hora</h2>
+                                    <canvas id="myChart" width="553" height="244"></canvas>
+                                    <button type="button" class="btn download"><i class="cil-data-transfer-down"></i>Descargar datos</button>
                                 </div>
                             </div>
-                            <div class="col-lg-12 bg-white" style="border-radius: 10px; padding: 20px;">
-                                <p style="font-size: 20px; color: #440099; font-weight: 900;">Acercamientos por hora</p>
-                                <canvas id="myChart" width="553" height="244"></canvas>
-                                <button type="button" class="btn" style="border-radius: 22px; width: 173px; height: 44px;border: solid 1px; border-color: #E9E6EE; font-size: 14px; font-weight: 600px;"><i class="cil-data-transfer-down" style="padding-right: 8px; color: #EF426F;"></i>Descargar datos</button>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-sm pl-4 rounded-lg" style="margin-left: 16px;">
-                        <div class="row justify-content-between">
-                            <div class="col-lg-12 bg-white" style="border-radius: 10px; padding: 20px;">
-                                <p style="font-size: 20px; color: #440099; font-weight: 900;">Acercamientos por Sectores</p>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                         </div>
+
+                         <div class="col-6">
+                             <div class="card-custom" style="margin-left: 16px;">
+                                 <h2>Acercamientos por Sectores</h2>
+                             </div>
+                        </div>    
+                     </div>
+                 </div>
             </div>
+
             <div class="tab-pane fade"
                  id="pills-profile"
                  role="tabpanel"
                  aria-labelledby="pills-profile-tab">
                 <p>Puto uwu</p>
             </div>
+
             <div class="tab-pane fade"
                  id="pills-contact"
                  role="tabpanel"
