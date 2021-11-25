@@ -107,3 +107,16 @@ const myChart = new Chart(
   );
 
 // Fin de cuadro estadistico
+
+var datosG = document.getElementById("datosGenerales");
+var notificaciones = document.getElementById("notificaciones")
+
+function datos() {
+  notificaciones.style.display = "none";
+  datosG.style.display = ""
+}
+
+function notif() {
+  notificaciones.style.display = "";
+  datosG.style.display = "none"
+}

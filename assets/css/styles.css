@@ -306,7 +306,7 @@ a{
 /* ===== CONTENIDO TABS =====*/
 
 .tab-content {
-  padding: 40px;
+  padding: 40px 40px 0 40px;
 }
 
 .card-custom {
@@ -444,5 +444,12 @@ a{
   }
 }
 
-
-
+/* Barra de Scroll */
+.notificaciones::-webkit-scrollbar{
+  width: 8px;
+  background: #F4F7FB;
+}
+.notificaciones::-webkit-scrollbar-thumb{
+  background: #E9E6EE;
+  border-radius: 4px;
+}
