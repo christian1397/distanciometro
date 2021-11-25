@@ -102,167 +102,151 @@
                              </div>
 
                              <div class="col-6">
-                                 <div class="card-custom" style="margin-left: 16px;">
-                                     <h2>Acercamientos por Sectores</h2>
+                                <div class="card-custom acercamientos-sectores">
+                                    <h2>Acercamientos por Sectores</h2>
+
                                     <!-- Tab de Sectores -->
-                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="flex-direction: inherit;">
+                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                          <button class="nav-link active" id="pills-todos-tab" data-bs-toggle="pill" data-bs-target="#pills-todos" type="button" role="tab" aria-controls="pills-todos" aria-selected="true">Todos los sectores</button>
+                                            <button class="nav-link active" id="pills-todos-tab" data-bs-toggle="pill" data-bs-target="#pills-todos" type="button" role="tab" aria-controls="pills-todos" aria-selected="true">Todos los sectores</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                          <button class="nav-link" id="pills-sectorA-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorA" type="button" role="tab" aria-controls="pills-sectorA" aria-selected="false">Sector A</button>
+                                            <button class="nav-link" id="pills-sectorA-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorA" type="button" role="tab" aria-controls="pills-sectorA" aria-selected="false">Sector A</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                          <button class="nav-link" id="pills-sectorB-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorB" type="button" role="tab" aria-controls="pills-sectorB" aria-selected="false">Sector B</button>
+                                            <button class="nav-link" id="pills-sectorB-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorB" type="button" role="tab" aria-controls="pills-sectorB" aria-selected="false">Sector B</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                          <button class="nav-link" id="pills-sectorC-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorC" type="button" role="tab" aria-controls="pills-sectorC" aria-selected="false">Sector C</button>
+                                            <button class="nav-link" id="pills-sectorC-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorC" type="button" role="tab" aria-controls="pills-sectorC" aria-selected="false">Sector C</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                          <button class="nav-link" id="pills-sectorD-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorD" type="button" role="tab" aria-controls="pills-sectorD" aria-selected="false">Sector D</button>
+                                            <button class="nav-link" id="pills-sectorD-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorD" type="button" role="tab" aria-controls="pills-sectorD" aria-selected="false">Sector D</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                          <button class="nav-link" id="pills-sectorE-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorE" type="button" role="tab" aria-controls="pills-sectorE" aria-selected="false">Sector E</button>
+                                            <button class="nav-link" id="pills-sectorE-tab" data-bs-toggle="pill" data-bs-target="#pills-sectorE" type="button" role="tab" aria-controls="pills-sectorE" aria-selected="false">Sector E</button>
                                         </li>
-                                      </ul>
-                                      <div class="tab-content" id="pills-tabContent" style="padding: 0;">
+                                    </ul>
 
-                                        <!-- Todos los Sectores -->
+                                    <!-- Contenido Tab de Sectores -->
+                                    <div class="tab-content" id="pills-tabContent">
+
+                                        <!-- Contenido tab "Todos los Sectores" -->
                                         <div class="tab-pane fade show active" id="pills-todos" role="tabpanel" aria-labelledby="pills-todos-tab">
+                                            
                                             <!-- Imagen todos los Sectores -->
-                                            <div style="border-radius: 10px; border: solid 1px; border-color: #E9E6EE; width: 100%; height: 240px; position: relative;">
-                                                <img src="assets/img/todosSectores.png" style="position: absolute; left: 25%;">
-                                                <div style="position: absolute;right: 10px; bottom: 10px; width: 32px; height: 72px;">
-                                                    <div class="rounded-circle" style="border: solid 1px; border-color: #E9E6EE; width: 32px; height: 32px; margin-bottom: 8px; position: relative; cursor: pointer;">
-                                                        <i class="cil-plus" style="color: #333333; position: absolute; top: 7px; left: 7px;"></i>
-                                                    </div>
-                                                    <div class="rounded-circle" style="border: solid 1px; border-color: #E9E6EE; width: 32px; height: 32px; position: relative; cursor: pointer;">
-                                                        <i class="cil-minus" style="color: #333333; position: absolute; top: 7px; left: 7px;"></i>
-                                                    </div>
+                                            <div class="contenedor-mapa-sectores">
+                                                <img src="assets/img/todosSectores.png">
+                                                <div class="zoom">
+                                                    <button class="rounded-circle"><i class="cil-plus"></i></button>
+                                                    <button class="rounded-circle"><i class="cil-minus"></i></button>
                                                 </div>
                                             </div>
 
-                                            <!-- Data Sector A -->
-                                            <div style="margin-top: 24px">
-                                                <p style="color: #333333"><strong>Sector A</strong> - 210 acercamientos
-                                                    <span class="percent">
-                                                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
-                                                        </svg>
-                                                        12%
-                                                    </span>
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col-11">
-                                                        <div class="progress" style="border-radius: 8px; background-color: #F4F7FB;">
-                                                            <div class="progress-bar" role="progressbar" style="width: 42%; border-radius: 8px; background-color: #00A9E0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="container-data">
+                                        
+                                                <!-- Data Sector A -->
+                                                <div class="data-bar">
+                                                    <p><strong>Sector A</strong> - 210 acercamientos
+                                                        <span class="percent">
+                                                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
+                                                            </svg>
+                                                            20%
+                                                        </span>
+                                                    </p>
+                                                    <div class="bar">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-1">
-                                                        <p style="color: #666666;">42%</p>
+                                                        <span>42%</span>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <!-- Data Sector B -->
-                                            <div style="margin-top: 10px">
-                                                <p style="color: #333333"><strong>Sector B</strong> - 50 acercamientos
-                                                    <span class="percent">
-                                                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
-                                                        </svg>
-                                                        2%
-                                                    </span>
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col-11">
-                                                        <div class="progress" style="border-radius: 8px; background-color: #F4F7FB;">
-                                                            <div class="progress-bar" role="progressbar" style="width: 10%; border-radius: 8px; background-color: #00A9E0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <!-- Data Sector B -->
+                                                <div class="data-bar">
+                                                    <p><strong>Sector B</strong> - 50 acercamientos
+                                                        <span class="percent">
+                                                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
+                                                            </svg>
+                                                            2%
+                                                        </span>
+                                                    </p>
+                                                    <div class="bar">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-1">
-                                                        <p style="color: #666666;">10%</p>
+                                                        <span>10%</span>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <!-- Data Sector C -->
-                                            <div style="margin-top: 10px">
-                                                <p style="color: #333333"><strong>Sector C</strong> - 110 acercamientos
-                                                    <span class="percent">
-                                                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
-                                                        </svg>
-                                                        12%
-                                                    </span>
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col-11">
-                                                        <div class="progress" style="border-radius: 8px; background-color: #F4F7FB;">
-                                                            <div class="progress-bar" role="progressbar" style="width: 22%; border-radius: 8px; background-color: #00A9E0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <!-- Data Sector C -->
+                                                <div class="data-bar">
+                                                    <p><strong>Sector C</strong> - 110 acercamientos
+                                                        <span class="percent">
+                                                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
+                                                            </svg>
+                                                            12%
+                                                        </span>
+                                                    </p>
+                                                    <div class="bar">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-1">
-                                                        <p style="color: #666666;">22%</p>
+                                                        <span>22%</span>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <!-- Data Sector D -->
-                                            <div style="margin-top: 10px">
-                                                <p style="color: #333333"><strong>Sector D</strong> - 40 acercamientos
-                                                    <span class="percent">
-                                                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
-                                                        </svg>
-                                                        4%
-                                                    </span>
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col-11">
-                                                        <div class="progress" style="border-radius: 8px; background-color: #F4F7FB;">
-                                                            <div class="progress-bar" role="progressbar" style="width: 8%; border-radius: 8px; background-color: #00A9E0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <!-- Data Sector D -->
+                                                <div class="data-bar">
+                                                    <p><strong>Sector D</strong> - 40 acercamientos
+                                                        <span class="percent">
+                                                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: scaleY(-1);">
+                                                                <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
+                                                            </svg>
+                                                            4%
+                                                        </span>
+                                                    </p>
+                                                    <div class="bar">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-1">
-                                                        <p style="color: #666666;">8%</p>
+                                                        <span>8%</span>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <!-- Data Sector E -->
-                                            <div style="margin-top: 10px">
-                                                <p style="color: #333333"><strong>Sector E</strong> - 90 acercamientos
-                                                    <span class="percent">
-                                                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
-                                                        </svg>
-                                                        8%
-                                                    </span>
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col-11">
-                                                        <div class="progress" style="border-radius: 8px; background-color: #F4F7FB;">
-                                                            <div class="progress-bar" role="progressbar" style="width: 18%; border-radius: 8px; background-color: #00A9E0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <!-- Data Sector E -->
+                                                <div class="data-bar">
+                                                    <p><strong>Sector E</strong> - 90 acercamientos
+                                                        <span class="percent">
+                                                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M10.7073 0V1.16231H13.0458L6.27146 8.04075L3.69582 5.42555L0 9.1781L0.809465 10L3.69582 7.06927L6.27146 9.68447L13.8553 1.98421V4.35866H15V0H10.7073Z" fill="#333333"/>
+                                                            </svg>
+                                                            8%
+                                                        </span>
+                                                    </p>
+                                                    <div class="bar">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-1">
-                                                        <p style="color: #666666;">18%</p>
+                                                        <span>18%</span>
                                                     </div>
                                                 </div>
+
                                             </div>
 
+                                            <p class="caption">comparativa con el día anterior</p>
+                                            <button type="button" class="btn download"><i class="cil-data-transfer-down"></i>Descargar datos</button>
                                         </div>
 
-                                        <div class="tab-pane fade" id="pills-sectorA" role="tabpanel" aria-labelledby="pills-sectorA-tab">
-
-                                        </div>
-
+                                        <!-- Contenido tabs sector por sector -->
+                                        <div class="tab-pane fade" id="pills-sectorA" role="tabpanel" aria-labelledby="pills-sectorA-tab">Sector A</div>
                                         <div class="tab-pane fade" id="pills-sectorB" role="tabpanel" aria-labelledby="pills-sectorB-tab">Sector B</div>
                                         <div class="tab-pane fade" id="pills-sectorC" role="tabpanel" aria-labelledby="pills-sectorC-tab">Sector C</div>
                                         <div class="tab-pane fade" id="pills-sectorD" role="tabpanel" aria-labelledby="pills-sectorD-tab">Sector D</div>
                                         <div class="tab-pane fade" id="pills-sectorE" role="tabpanel" aria-labelledby="pills-sectorE-tab">Sector E</div>
-                                      </div>
+                                    </div>
                                  </div>
                             </div>    
                          </div>
