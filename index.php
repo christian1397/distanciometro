@@ -18,6 +18,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$sql = "UPDATE INTO Coordenadas (id_gps, latitud, longitud)
+VALUES ($idGps, $latitud, $longitud) WHERE id_gps = 1";
+
 $sql = "SELECT latitud, longitud FROM Coordenadas WHERE id_gps = 0";
 
 $result = mysqli_query($conn, $sql);
