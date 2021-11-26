@@ -16,7 +16,52 @@
         <link rel="stylesheet" href="assets/css/styles.css">
     </head>
     <body id="body-pd">
+        <div class="l-navbar" id="nav-bar" style="padding-right: 0px;">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <span class='bx nav__logo-icon'></span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active" onclick="datos()">
+                            <i class='bx bx cil-chart nav__icon' ></i>
+                            <span class="nav__name">Datos Generales</span>
+                        </a>
+
+                        <a href="#" class="nav__link" onclick="notif()">
+                            <i class='bx bx cil-bell nav__icon' ></i>
+                            <span class="nav__name">Notificaciones</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="#" class="nav__link">
+                        <i class='bx cil-account-logout nav__icon' ></i>
+                        <span class="nav__name">Cerrar Sesión</span>
+                    </a>
+
+                    <div class="nav__user">
+                        <img class='bx nav__user-img' src="assets/img/img_usuario.png">
+                        <div class="nav__user-info">
+                            <span class="nav__user-name">Tienda Benavides</span>
+                            <span class="nav__user-company">Supermercado Wong</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <i class='bx bx nav__icon open' id="openMenu" onclick="openMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.1401 17.7803L10.0795 16.7197L14.7991 12L10.0795 7.28032L11.1401 6.21973L16.9204 12L11.1401 17.7803Z" fill="#333333"/>
+                </svg>
+            </i>
+        </div>
+
+        <!-- DATOS GENERALES -->
         <div id="datosGenerales">
+            <!-- TABS -->
             <header class="header" id="header">
                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -51,7 +96,8 @@
                     </li>
                 </ul>
             </header>
-
+            
+            <!-- CONTENIDO TABS -->
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active"
                      id="pills-home"
@@ -269,7 +315,9 @@
             </div>
         </div>
 
-        <div id="notificaciones" style="display: none; transition: .3s;">
+        <!-- NOTIFICACIONES -->
+        <div id="notificaciones">
+            <!-- TABS -->
             <header class="header" id="header">
                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation" style="width: 180px;">
@@ -335,6 +383,7 @@
                 </ul>
             </header>
 
+            <!-- CONTENIDO TABS -->
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active"
                      id="pills-home"
@@ -600,57 +649,6 @@
                     <p>GA</p>
                 </div>
             </div>
-        </div>
-
-        <!-- <div class="containerOpen">
-            <i class='bx bx nav__icon open' id="openMenu" onclick="openMenu()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.1401 17.7803L10.0795 16.7197L14.7991 12L10.0795 7.28032L11.1401 6.21973L16.9204 12L11.1401 17.7803Z" fill="#333333"/>
-                </svg>
-            </i>
-        </div> -->
-
-        <div class="l-navbar" id="nav-bar" style="padding-right: 0px;">
-            <nav class="nav">
-                <div>
-                    <a href="#" class="nav__logo">
-                        <span class='bx nav__logo-icon'></span>
-                    </a>
-
-                    <div class="nav__list">
-                        <a href="#" class="nav__link active" onclick="datos()">
-                            <i class='bx bx cil-chart nav__icon' ></i>
-                            <span class="nav__name">Datos Generales</span>
-                        </a>
-
-                        <a href="#" class="nav__link" onclick="notif()">
-                            <i class='bx bx cil-bell nav__icon' ></i>
-                            <span class="nav__name">Notificaciones</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="#" class="nav__link">
-                        <i class='bx cil-account-logout nav__icon' ></i>
-                        <span class="nav__name">Cerrar Sesión</span>
-                    </a>
-
-                    <div class="nav__user">
-                        <img class='bx nav__user-img' src="assets/img/img_usuario.png">
-                        <div class="nav__user-info">
-                            <span class="nav__user-name">Tienda Benavides</span>
-                            <span class="nav__user-company">Supermercado Wong</span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            
-            <i class='bx bx nav__icon open' id="openMenu" onclick="openMenu()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.1401 17.7803L10.0795 16.7197L14.7991 12L10.0795 7.28032L11.1401 6.21973L16.9204 12L11.1401 17.7803Z" fill="#333333"/>
-                </svg>
-            </i>
         </div>
 
         <!-- PLUGINS -->

@@ -113,10 +113,10 @@ var notificaciones = document.getElementById("notificaciones")
 
 function datos() {
   notificaciones.style.display = "none";
-  datosG.style.display = ""
+  datosG.style.display = "block"
 }
 
 function notif() {
-  notificaciones.style.display = "";
+  notificaciones.style.display = "block";
   datosG.style.display = "none"
 }
