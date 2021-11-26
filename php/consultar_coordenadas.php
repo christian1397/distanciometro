@@ -60,5 +60,14 @@ $km = $r * $c;
 
 echo "$km Km";
 
+$cont = 0;
+
+if ($km < 0.0015) {
+    $cont++;
+}
+
+echo '<br>';
+echo $cont;
+
 $conn->close();
 ?>
