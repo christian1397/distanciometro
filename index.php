@@ -1,14 +1,11 @@
 <?php
 
-header("Cache-Control: no-cache");
+/*header("Cache-Control: no-cache");
 
 $servername = "localhost";
 $username = "ukbf28narptj6";
 $password = "`3uJ%t%I#R2?";
 $dbname = "dbplpofgki7nv6";
-
-// Obtenemos los datos a consultar por medio del método GET
-//$idGps = $_GET['id'];
 
 // Creacion de la conexion
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,27 +20,10 @@ $sql = "SELECT latitud, longitud FROM Coordenadas WHERE id_gps = 0";
 $result = mysqli_query($conn, $sql);
 $mostrar1 = mysqli_fetch_array($result);
 
-// while($mostrar = mysqli_fetch_array($result)){
-//     echo $mostrar['latitud'];
-//     echo '<br>';
-//     echo $mostrar['longitud'];
-//     echo '<br>';
-// }
-
 $sql2 = "SELECT latitud, longitud FROM Coordenadas WHERE id_gps = 1";
 
 $result2 = mysqli_query($conn, $sql2);
 $mostrar2 = mysqli_fetch_array($result2);
-
-// while($mostrar = mysqli_fetch_array($result2)){
-//     echo $mostrar1['latitud'];
-//     echo '<br>';
-//     echo $mostrar1['longitud'];
-//     echo '<br>';
-//     echo $mostrar2['latitud'];
-//     echo '<br>';
-//     echo $mostrar2['longitud'];
-// }
 
 $pi80 = M_PI / 180;
 $lat1 = $pi80 * $mostrar1['latitud'];
@@ -58,18 +38,14 @@ $a = sin($lat / 2) * sin($lat / 2) + cos($lat1) * cos($lat2) * sin($lon / 2) * s
 $c = 2 * atan2(sqrt($a), sqrt(1 - $a)); 
 $km = $r * $c; 
 
-// echo "$km Km";
-
 $cont = 0;
 
 if ($km < 0.0015) {
     $cont++;
 }
 
-// echo '<br>';
-// echo $cont;
+$conn->close();*/
 
-$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -178,14 +154,15 @@ $conn->close();
                      role="tabpanel"
                      aria-labelledby="pills-home-tab">
                      <div class="container-fluid p-0">
-                         <div class="row g-0"> 
+                         <div class="row g-0">                            
                              <div class="col-6">
                                 <div class="row g-0 d-flex align-items-stretch" style="margin-right: 16px;">
+                                    <!-- ACERCAMIENTOS EN TOTAL -->
                                     <div class="col-6">
                                         <div class="card-custom acercamientos-total">
                                             <h2>Acercamientos en total</h2>
                                             <div class="value">
-                                                <span class="number"><?php echo $cont?></span>
+                                                <span class="number"><?php// echo $cont?></span>
                                                 <div class="caption">
                                                     <span class="percent">
                                                         <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,6 +176,7 @@ $conn->close();
                                         </div>
                                     </div>
 
+                                    <!-- PROMEDIO DE ACERCAMIENTOS -->
                                     <div class="col-6">
                                         <div class="card-custom promedio-acercamientos">
                                             <h2>Promedio de acercamientos</h2>
@@ -213,6 +191,7 @@ $conn->close();
                                 </div>
 
                                 <div class="row g-0" style="margin-right: 16px;">
+                                    <!-- ACERCAMIENTOS POR HORA -->
                                     <div class="col-12 card-custom acercamientos-hora">
                                         <h2>Acercamientos por Hora</h2>
                                         <canvas id="myChart" width="553" height="244"></canvas>
@@ -221,6 +200,7 @@ $conn->close();
                                 </div>
                              </div>
 
+                             <!-- ACERCAMIENTOS POR SECTORES -->
                              <div class="col-6">
                                 <div class="card-custom acercamientos-sectores">
                                     <h2>Acercamientos por Sectores</h2>
@@ -247,7 +227,7 @@ $conn->close();
                                         </li>
                                     </ul>
 
-                                    <!-- Contenido Tab de Sectores -->
+                                    <!-- Contenido Tabs de Sectores -->
                                     <div class="tab-content" id="pills-tabContent">
 
                                         <!-- Contenido tab "Todos los Sectores" -->
@@ -276,7 +256,7 @@ $conn->close();
                                                     </p>
                                                     <div class="bar">
                                                         <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar" role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                         <span>42%</span>
                                                     </div>
@@ -294,7 +274,7 @@ $conn->close();
                                                     </p>
                                                     <div class="bar">
                                                         <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                         <span>10%</span>
                                                     </div>
@@ -312,7 +292,7 @@ $conn->close();
                                                     </p>
                                                     <div class="bar">
                                                         <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                         <span>22%</span>
                                                     </div>
@@ -330,7 +310,7 @@ $conn->close();
                                                     </p>
                                                     <div class="bar">
                                                         <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar" role="progressbar" style="width: 8%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                         <span>8%</span>
                                                     </div>
@@ -348,7 +328,7 @@ $conn->close();
                                                     </p>
                                                     <div class="bar">
                                                         <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar" role="progressbar" style="width: 18%" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                         <span>18%</span>
                                                     </div>
@@ -394,9 +374,8 @@ $conn->close();
             <!-- TABS -->
             <header class="header" id="header">
                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation" style="width: 180px;">
+                    <li class="nav-item" role="presentation">
                         <button class="nav-link active" 
-                                style="width: 100%;"
                                 id="pills-home-tab" 
                                 data-bs-toggle="pill" 
                                 data-bs-target="#pills-home"
@@ -404,19 +383,12 @@ $conn->close();
                                 role="tab"
                                 aria-controls="pills-home"
                                 aria-selected="true">
-                                <div class="row">
-                                    <div class="col-8" style="text-align: end; padding-right: 0;">
-                                        Primer nivel
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="rounded-circle" style="color: #333333; font-weight: 500; font-size: 12px; background-color: #F1C400; width: 20px; height: 20px;">4</div>
-                                    </div>
-                                </div>
-                        </button>  
+                                Primer nivel
+                                <span class="notif-amt-badge">6</span>
+                        </button>
                     </li>
-                    <li class="nav-item" role="presentation" style="width: 200px;">
+                    <li class="nav-item" role="presentation">
                         <button class="nav-link" 
-                                style="width: 100%;"
                                 id="pills-profile-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-profile"
@@ -424,19 +396,12 @@ $conn->close();
                                 role="tab"
                                 aria-controls="pills-profile"
                                 aria-selected="false">
-                                <div class="row">
-                                    <div class="col-8" style="text-align: end; padding-right: 0;">
-                                        Segundo nivel
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="rounded-circle" style="color: #333333; font-weight: 500; font-size: 12px; background-color: #F1C400; width: 20px; height: 20px;">1</div>
-                                    </div>
-                                </div>
-                            </button>
+                                Segundo nivel
+                                <span class="notif-amt-badge">1</span>    
+                        </button>
                     </li>
-                    <li class="nav-item" role="presentation" style="width: 180px;">
+                    <li class="nav-item" role="presentation">
                         <button class="nav-link"
-                                style="width: 100%;"
                                 id="pills-contact-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-contact"
@@ -444,15 +409,9 @@ $conn->close();
                                 role="tab"
                                 aria-controls="pills-contact"
                                 aria-selected="false">
-                                <div class="row">
-                                    <div class="col-8" style="text-align: end; padding-right: 0;">
-                                        Tercer nivel
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="rounded-circle" style="color: #333333; font-weight: 500; font-size: 12px; background-color: #F1C400; width: 20px; height: 20px;">1</div>
-                                    </div>
-                                </div>
-                            </button>
+                                Tercer Nivel
+                                <span class="notif-amt-badge">1</span>    
+                        </button>
                     </li>
                 </ul>
             </header>
@@ -465,8 +424,25 @@ $conn->close();
                      aria-labelledby="pills-home-tab">
                      <div class="container-fluid p-0">
                          <div class="row g-0"> 
-                             <div class="col-4">
-                                <div class="row g-0 d-flex align-items-stretch notificaciones" style="margin-right: 16px; height: calc(100vh - 104px); overflow: auto;">
+                             <div class="col-4 contenedor-notificaciones" class style="padding-right: 16px; height: calc(100vh - 104px); overflow: auto;">
+                                 <ul class="list-notificaciones">
+                                    <li>
+                                        <div class="card-custom unread">
+                                            <!-- <span class="notif-badge"></span> -->
+                                            <div class="notif-content">
+                                                <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
+                                                <h2 style="font-weight: 500px; font-size: 14px; color: #666666;">Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</h2>
+                                                <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                 </ul>
+                                <!-- <div class="row g-0 contenedor-notificaciones" style="margin-right: 16px; height: calc(100vh - 104px); overflow: auto;">
                                     <div class="col-12" style="margin-bottom: 20px;">
                                         <div class="card-custom acercamientos-total" style="border: solid 1px; border-color: #EF426F;">
                                             <div class="row">
@@ -481,6 +457,7 @@ $conn->close();
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-12" style="margin-bottom: 20px;">
                                         <div class="card-custom acercamientos-total">
                                             <div class="row">
@@ -494,6 +471,7 @@ $conn->close();
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-12" style="margin-bottom: 20px;">
                                         <div class="card-custom acercamientos-total">
                                             <div class="row">
@@ -507,6 +485,7 @@ $conn->close();
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-12" style="margin-bottom: 20px;">
                                         <div class="card-custom acercamientos-total">
                                             <div class="row">
@@ -520,6 +499,7 @@ $conn->close();
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-12" style="margin-bottom: 20px;">
                                         <div class="card-custom acercamientos-total">
                                             <div class="row">
@@ -530,168 +510,18 @@ $conn->close();
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
+                                    <div class="col-12" style="margin-bottom: 20px;">
+                                        <div class="card-custom acercamientos-total">
+                                            <div class="row">
+                                                <div class="col-12" style="margin: 10px;">
+                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
+                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
                              </div>
 
                              <div class="col-8" style="position: relative; background: #ffffff; height: calc(100vh - 135px); border-radius: 10px;">
