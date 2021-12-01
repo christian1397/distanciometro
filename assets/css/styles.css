@@ -395,6 +395,7 @@ a{
   font-size: 14px;
   line-height: 1em;
   font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--accent-color);
   padding: 12px 16px;
   border-radius: 50rem;
@@ -550,6 +551,10 @@ a{
   display: none;
 }
 
+#notificaciones .tab-content {
+  padding-bottom: 0px;
+}
+
 .notif-amt-badge {
   display: inline-flex;
   align-items: center;
@@ -565,26 +570,92 @@ a{
   color: var(--accent-color);
 }
 
-.contenedor-notificaciones::-webkit-scrollbar{
+.list-notificaciones {
+  height: calc(100vh - 104px);
+  overflow: auto;
+  padding: 0px;
+  padding-right: 12px;
+  margin: 0px;
+}
+
+.list-notificaciones::-webkit-scrollbar{
   width: 8px;
   background: #F4F7FB;
 }
-.contenedor-notificaciones::-webkit-scrollbar-thumb{
+
+.list-notificaciones::-webkit-scrollbar-thumb{
   background: #E9E6EE;
   border-radius: 4px;
 }
 
-.list-notificaciones {
-  padding: 0px;
-  margin: 0px;
-}
-
 .list-notificaciones li {
+  cursor: pointer;
   list-style: none;
+  margin-bottom: 20px;
 }
 
 .notif-content {
+  position: relative;
   padding-left: 16px;
+}
+
+.card-custom.active {
+  border: 1px solid var(--rosa-color);
+}
+
+.card-custom.unread .notif-content::after{
+  content: " ";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50rem;
+  background-color: var(--amarillo-color);
+}
+
+.notif-content h3 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-bottom: 4px;
+}
+
+.notif-content h3 strong {
+  font-weight: 700;
+}
+
+.notif-content p {
+  display: none;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.card-custom.active .notif-content p {
+  display: block;
+}
+
+.notif-content span {
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+#notificaciones .contenedor-mapa-sectores {
+  height: calc(100vh - 144px);
+  background-color: white;
+  border: none;
+  margin-bottom: 0px;
+}
+
+#notificaciones .contenedor-mapa-sectores .zoom {
+  right: 24px;
+  bottom: 24px;
 }
 
 /* ===== MEDIA QUERIES=====*/

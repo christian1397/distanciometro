@@ -424,114 +424,72 @@ $conn->close();*/
                      aria-labelledby="pills-home-tab">
                      <div class="container-fluid p-0">
                          <div class="row g-0"> 
-                             <div class="col-4 contenedor-notificaciones" class style="padding-right: 16px; height: calc(100vh - 104px); overflow: auto;">
+                             <div class="col-4" style="padding-right: 16px; position: relative;">
+                                <!-- LISTADO DE NOTIFICACIONES -->
                                  <ul class="list-notificaciones">
                                     <li>
-                                        <div class="card-custom unread">
-                                            <!-- <span class="notif-badge"></span> -->
+                                        <div class="card-custom unread active">
                                             <div class="notif-content">
-                                                <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                <h2 style="font-weight: 500px; font-size: 14px; color: #666666;">Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</h2>
-                                                <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
+                                                <h3>Se han detectado acercamientos en el <strong>Sector D</strong></h3>
+                                                <p>Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</p>
+                                                <span>1:24 PM</span>
                                             </div>
                                         </div>
                                     </li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li>
+                                        <div class="card-custom unread">
+                                            <div class="notif-content">
+                                                <h3>Se han detectado acercamientos en el <strong>Sector C</strong></h3>
+                                                <p>Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</p>
+                                                <span>1:45 PM</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-custom unread">
+                                            <div class="notif-content">
+                                                <h3>Se han detectado acercamientos en el <strong>Sector D</strong></h3>
+                                                <p>Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</p>
+                                                <span>1:23 PM</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-custom unread">
+                                            <div class="notif-content">
+                                                <h3>Se han detectado acercamientos en el <strong>Sector E</strong></h3>
+                                                <p>Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</p>
+                                                <span>11:58 AM</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-custom">
+                                            <div class="notif-content">
+                                                <h3>Se han detectado acercamientos en el <strong>Sector B</strong></h3>
+                                                <p>Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</p>
+                                                <span>11:58 AM</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-custom">
+                                            <div class="notif-content">
+                                                <h3>Se han detectado acercamientos en el <strong>Sector B</strong></h3>
+                                                <p>Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</p>
+                                                <span>11:58 AM</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                  </ul>
-                                <!-- <div class="row g-0 contenedor-notificaciones" style="margin-right: 16px; height: calc(100vh - 104px); overflow: auto;">
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total" style="border: solid 1px; border-color: #EF426F;">
-                                            <div class="row">
-                                                <div class="col-1" style="position: relative;">
-                                                    <div class="rounded-circle" style="background-color: #F1C400; width: 8px; height: 8px; position: absolute; top: 14px; left: 5px;"></div>
-                                                </div>
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #666666;">Hay clientes que han permanecido a menos de 1.5 metros de distancia por más de 30 segundos.</h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-1" style="position: relative;">
-                                                    <div class="rounded-circle" style="background-color: #F1C400; width: 8px; height: 8px; position: absolute; top: 14px; left: 5px;"></div>
-                                                </div>
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector C</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">12:45 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-1" style="position: relative;">
-                                                    <div class="rounded-circle" style="background-color: #F1C400; width: 8px; height: 8px; position: absolute; top: 14px; left: 5px;"></div>
-                                                </div>
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">12:23 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-1" style="position: relative;">
-                                                    <div class="rounded-circle" style="background-color: #F1C400; width: 8px; height: 8px; position: absolute; top: 14px; left: 5px;"></div>
-                                                </div>
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector E</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">11:58 AM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector B</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12" style="margin-bottom: 20px;">
-                                        <div class="card-custom acercamientos-total">
-                                            <div class="row">
-                                                <div class="col-12" style="margin: 10px;">
-                                                    <h2 style="font-weight: 700px; font-size: 16px; color: #333333;">Se han detectado acercamientos en el <strong>Sector D</strong></h2>
-                                                    <h2 style="font-weight: 500px; font-size: 14px; color: #333333; margin-bottom: 0;">1:24 PM</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                              </div>
 
-                             <div class="col-8" style="position: relative; background: #ffffff; height: calc(100vh - 135px); border-radius: 10px;">
-                                <img src="assets/img/sectoresNotif.png" style="position: absolute; left: 35%; top: 18%;">
-                                <div style="position: absolute;right: 24px; bottom: 24px; width: 32px; height: 72px;">
-                                    <div class="rounded-circle" style="border: solid 1px; border-color: #E9E6EE; width: 32px; height: 32px; margin-bottom: 8px; position: relative; cursor: pointer;">
-                                        <i class="cil-plus" style="color: #333333; position: absolute; top: 7px; left: 7px;"></i>
-                                    </div>
-                                    <div class="rounded-circle" style="border: solid 1px; border-color: #E9E6EE; width: 32px; height: 32px; position: relative; cursor: pointer;">
-                                        <i class="cil-minus" style="color: #333333; position: absolute; top: 7px; left: 7px;"></i>
+                             <div class="col-8" style="padding-left: 16px;">
+                                <div class="contenedor-mapa-sectores">
+                                    <img src="assets/img/sectoresNotif.png">
+                                    <div class="zoom">
+                                        <button class="rounded-circle"><i class="cil-plus"></i></button>
+                                        <button class="rounded-circle"><i class="cil-minus"></i></button>
                                     </div>
                                 </div>
                             </div>    
@@ -543,14 +501,14 @@ $conn->close();*/
                      id="pills-profile"
                      role="tabpanel"
                      aria-labelledby="pills-profile-tab">
-                    <p>Puto uwu</p>
+                    <p></p>
                 </div>
 
                 <div class="tab-pane fade"
                      id="pills-contact"
                      role="tabpanel"
                      aria-labelledby="pills-contact-tab">
-                    <p>GA</p>
+                    <p></p>
                 </div>
             </div>
         </div>
