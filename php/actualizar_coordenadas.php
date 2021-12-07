@@ -19,20 +19,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$actualizar = "UPDATE Coordenadas SET latitud = $latitud, longitud = $longitud WHERE id_gps = 0";
+$actualizar = "INSERT INTO Coordenadas (latitud, longitud) VALUES ($latitud, $longitud)";
 
 if ($conn->query($actualizar) === TRUE) {
 
     // Si la actualización es exitosa mostramos las coordenadas que se han actualizado
     echo "Se actualizaron las coordenadas";
 
-    $consultarCoordenadas = "SELECT latitud, longitud FROM Coordenadas WHERE id_gps = 0";
-
-    $resultado = mysqli_query($conn, $consultarCoordenadas);
-    $mostrar = mysqli_fetch_array($resultado);
-
-    echo "<br><br>Coordenadas actualizadas: ";
-    echo $mostrar['latitud'] . "," . $mostrar['longitud'];
+    echo "<br><br>Coordenadas enviadas: ";
+    echo $latitud . "," . $longitud;
 
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
