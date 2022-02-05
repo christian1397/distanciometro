@@ -427,3 +427,23 @@ function dragElement_3(elmnt) {
 }
 
 //Fin efecto mover mapa
+
+//Menu Hamburguesa
+
+var menu = document.getElementById("menu");
+
+function openMenu2(){
+  var botonMenu = document.getElementById("nav-bar");
+  var openMenu = document.getElementById("openMenu2");
+  if (botonMenu.classList.contains("show2")) {
+      botonMenu.classList.remove("show2");
+      openMenu.style.transform = "rotate(0deg)";
+      openMenu.style.left = "56px";
+      botonMenu.style.left = "-90px";
+  } else{
+      botonMenu.classList.add("show2");
+      openMenu.style.transform = "rotate(-180deg)";
+      openMenu.style.left = "196px";
+      botonMenu.style.left = "0px";
+  }
+}

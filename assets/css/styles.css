@@ -110,6 +110,24 @@ header{
   border-bottom: 1px solid var(--border-color);
 }
 
+.titulo_mobile{
+  display: none;
+}
+
+.titulo_datos, .titulo_notificaciones{
+  font-size: 24px;
+  font-weight: 900;
+  color: #440099;
+}
+
+.titulo_notificaciones{
+  display: none;
+}
+
+#openMenu2{
+  display: none;
+}
+
 .header__toggle{
   color: var(--first-color);
   font-size: 1.5rem;
@@ -160,6 +178,14 @@ header{
   height: 2px;
   background-color: var(--rosa-color);
   border-radius: 2px 2px 0px 0px;
+}
+
+.scroll{
+  overflow-x: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
 }
 
 /*===== NAV =====*/
@@ -677,6 +703,16 @@ header{
   bottom: 24px;
 }
 
+.notificaciones_2, .mapa_notificaciones_2{
+  display: none;
+}
+
+.notif_hoy{
+  font-weight: 900;
+  font-size: 20px;
+  color: #333333;
+}
+
 /* ===== MEDIA QUERIES=====*/
 
 /* TABLE */
@@ -710,6 +746,40 @@ header{
     padding-top: 12px;
     min-height: auto;
     overflow: hidden;
+    display: block;
+  }
+
+  .titulo_mobile{
+    display: flex;
+  }
+
+  .list-notificaciones{
+    display: flex;
+  }
+
+  .list-notificaciones li{
+    margin-right: 16px;
+  }
+
+  .notificaciones_2, .mapa_notificaciones_2{
+    display: block;
+  }
+
+  .notificaciones_1, .mapa_notificaciones_1{
+    display: none;
+  }
+
+  .notificaciones_2 ul{
+    height: 210px;
+  }
+
+  .notificaciones_2 ul li .unread{
+    width: 300px;
+    height: 178px;
+  }
+
+  .list-notificaciones::-webkit-scrollbar{
+    display: none;
   }
 
   .nav {
@@ -722,7 +792,15 @@ header{
   }
 
   .l-navbar {
+    left: -90px;
+  }
+
+  #openMenu{
     display: none;
+  }
+
+  #openMenu2{
+    display: flex;
   }
 
   .tab-content {
