@@ -10,6 +10,7 @@ $dbname = "dbplpofgki7nv6";
 // Obtenemos los datos por medio del método GET
 $latitud = $_GET['latitud'];
 $longitud = $_GET['longitud'];
+$idGps = $_GET['id'];
 
 // Creacion de la conexion
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,18 +20,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$actualizar = "INSERT INTO Coordenadas (latitud, longitud) VALUES ($latitud, $longitud)";
+$actualizar = "UPDATE Coordenadas SET latitud = $latitud, longitud = $longitud WHERE id_gps = $idGps";
 
 if ($conn->query($actualizar) === TRUE) {
 
     // Si la actualización es exitosa mostramos las coordenadas que se han actualizado
-    echo "Se actualizaron las coordenadas";
-
-    echo "<br><br>Coordenadas enviadas: ";
+    echo "Coordenadas actualizadas ";
     echo $latitud . "," . $longitud;
 
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $actualizar . "<br>" . $conn->error;
 }
 
 $conn->close();

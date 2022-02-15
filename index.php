@@ -95,8 +95,8 @@ $conn->close();
                     <div class="nav__user">
                         <img class='bx nav__user-img' src="assets/img/img_usuario.png">
                         <div class="nav__user-info">
-                            <span class="nav__user-name">Tienda Benavides</span>
-                            <span class="nav__user-company">Supermercado Wong</span>
+                            <span class="nav__user-name">Campus Chacarilla</span>
+                            <span class="nav__user-company">Toulouse Lautrec</span>
                         </div>
                     </div>
                 </div>
