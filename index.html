@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 header("Cache-Control: no-cache");
 
@@ -46,10 +46,10 @@ if ($km < 0.0015) {
 
 $conn->close();
 
-?>
+?> -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -177,8 +177,8 @@ $conn->close();
                                         <div class="card-custom acercamientos-total">
                                             <h2>Acercamientos en total</h2>
                                             <div class="value">
-                                                <span class="number">
-                                                    <?php echo $cont?>
+                                                <span id="acercamientos_totales" class="number">
+                                                    <!-- <?php echo $cont?> -->
                                                 </span>
                                                 <div class="caption">
                                                     <span class="percent">
@@ -1981,5 +1981,9 @@ $conn->close();
 
         <!-- CUSTOM --> 
         <script src="assets/js/main.js"></script>
+
+        <!-- AJAX -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="assets/js/ajax.js"></script>
     </body>
 </html>
